@@ -1,0 +1,152 @@
+/* CSS Variables */
+:root {
+  --primary: #4f46e5;
+  --dark: #1f2933;
+  --light: #f9fafb;
+  --radius: 10px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-text {
+  margin: 15px 0;
+}
+
+.cta-btn {
+  padding: 12px 25px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Features */
+.features {
+  display: flex;
+  gap: 20px;
+  padding: 60px 40px;
+}
+
+.feature-card {
+  background: white;
+  padding: 25px;
+  border-radius: var(--radius);
+  flex: 1;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Pricing */
+.pricing {
+  display: flex;
+  gap: 20px;
+  padding: 60px 40px;
+}
+
+.price-card {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: var(--radius);
+  flex: 1;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.price-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.price {
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #e5e7eb;
+  margin-top: 40px;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .features,
+  .pricing {
+    flex-direction: column;
+  }
+}
